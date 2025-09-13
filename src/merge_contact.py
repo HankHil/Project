@@ -3,11 +3,11 @@ import json
 from utils import data_read, data_write
 
 
-def merge_contact(info):
+def merge_contact(book):
     try:
         file_content = json.loads(data_read())
 
-        with open(info, 'r') as c:
+        with open(book, 'r') as c:
             copy_content = c.read()
         if all([x not in y for x in copy_content for y in file_content]):
             file_content.update(json.loads(copy_content))

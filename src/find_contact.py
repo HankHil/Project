@@ -3,10 +3,10 @@ import json
 from utils import data_read
 
 
-def find_contact(info):
+def find_contact(numbers):
     try:
         data = json.loads(data_read())
-        print({x: y for x, y in data.items() if info.strip('"') in y})
+        print({x: y for x, y in data.items() if numbers.strip('"') in y})
     except json.decoder.JSONDecodeError:
         print('Справочник пуст, нечего искать.')
     except AttributeError:
