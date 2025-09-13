@@ -3,7 +3,7 @@ import json
 from utils import data_read, data_write
 
 
-def merge_contact(book):
+def merge_contact(book) -> None:
     try:
         file_content = json.loads(data_read())
 

@@ -3,10 +3,10 @@ import json
 from utils import data_read, data_write
 
 
-def delete_contact(info):
+def delete_contact(name: str) -> None:
     try:
         contacts = json.loads(data_read())
-        contacts.pop(info.strip('"'))
+        contacts.pop(name.strip('"'))
 
         data_write(contacts)
 

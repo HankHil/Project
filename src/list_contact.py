@@ -3,7 +3,7 @@ import json
 from utils import data_read
 
 
-def list_contact(name):
+def list_contact(name: str) -> None:
     try:
         if name:
             print(json.loads(data_read())[name.strip('"')])
